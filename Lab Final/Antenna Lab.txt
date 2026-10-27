@@ -1,0 +1,253 @@
+Lab 01 — Theory
+A dipole antenna is one of the simplest and most widely used antennas in wireless communication systems. It consists of two identical conductive elements and operates most efficiently when its total length is approximately half of the wavelength (λ/2), commonly known as a half-wave dipole antenna. Due to its simple structure, ease of fabrication, and reliable performance, it is extensively used in radio, television broadcasting, and communication systems.
+
+The radiation pattern of an antenna describes how electromagnetic energy is distributed in space. It indicates the directions of maximum and minimum radiation. For a half-wave dipole antenna, the radiated electric field intensity varies with the elevation angle θ and is given by:
+
+E(θ) ∝ sin(θ)
+
+After normalization, the radiation pattern can be expressed as:
+
+R(θ) = |sin(θ)|
+
+This equation shows that the radiation is maximum at θ = 90°, meaning the energy is strongest in the direction perpendicular to the antenna axis. Conversely, the radiation becomes zero at θ = 0° and θ = 180°, indicating no radiation along the axis of the antenna. As a result, the dipole antenna produces a characteristic figure-eight radiation pattern in the 2D plane and behaves as an omnidirectional radiator in the horizontal plane.
+
+In practical antenna systems, several important parameters are used to describe performance. One such parameter is directivity, which measures how concentrated the radiation is in a particular direction. A half-wave dipole antenna has a typical directivity of approximately 2.15 dBi. Another important parameter is radiation resistance, which represents the portion of antenna resistance responsible for radiation of electromagnetic energy.
+
+For three-dimensional visualization, the radiation pattern is initially defined in spherical coordinates and then converted into Cartesian coordinates. This transformation enables easier graphical representation of the radiation pattern in 3D space. The coordinate transformation is given by:
+
+X = R sin θ cos ϕ
+
+Y = R sin θ sin ϕ
+
+Z = R cos θ
+
+The resulting 3D radiation pattern typically forms a toroidal (doughnut-shaped) structure, indicating that radiation is maximum in the plane perpendicular to the antenna and minimum along its axis.
+
+Thus, both theoretical analysis and simulation play a crucial role in understanding the spatial distribution and directional characteristics of electromagnetic radiation from a dipole antenna, which is fundamental in antenna design and communication systems.
+
+Lab 02 — Theory
+An isotropic antenna is an ideal and hypothetical antenna that radiates electromagnetic energy equally in all directions in three-dimensional space. Although such an antenna cannot be physically realized, it plays a fundamental role in antenna theory as a reference model for evaluating and comparing the performance of practical antennas.
+
+Unlike real antennas such as dipole, horn, or patch antennas, an isotropic antenna does not exhibit any directional preference. This means that the radiation intensity remains constant regardless of the observation angle. Due to this unique property, it is widely used as a standard reference for defining antenna parameters such as gain and directivity.
+
+Mathematically, the radiation pattern of an isotropic antenna is expressed as:
+
+R(θ, ϕ) = constant
+
+This equation indicates that the radiated power is uniformly distributed in all directions, resulting in a perfect spherical radiation pattern in three-dimensional space.
+
+In a two-dimensional representation, the radiation pattern appears as a perfect circle because the magnitude of radiation is identical for all values of θ. This can be written as:
+
+R(θ) = 1
+
+This uniform distribution implies that there are no nulls, side lobes, or preferred directions in the radiation pattern, making it completely omnidirectional.
+
+For visualization purposes, the radiation pattern defined in spherical coordinates is converted into Cartesian coordinates using the following relations:
+
+X = R sin θ cos ϕ
+
+Y = R sin θ sin ϕ
+
+Z = R cos θ
+
+Since R is constant, these equations generate a perfect sphere in three-dimensional space, clearly illustrating uniform radiation in all directions.
+
+The isotropic antenna has a theoretical gain of 1 (or 0 dBi), which serves as a baseline for comparing other antennas. For instance, if an antenna has a gain of 3 dBi, it means that it radiates 3 dB more power in a particular direction compared to an isotropic antenna.
+
+Although isotropic antennas are not physically realizable, they are extremely important in understanding antenna behavior and performance metrics such as gain, directivity, and efficiency. Therefore, the concept of an isotropic antenna forms the foundation for the analysis and design of practical antenna systems.
+
+Lab 03 — Theory
+A horn antenna is a highly directional antenna that operates efficiently in the microwave frequency range. It is formed by gradually flaring the end of a waveguide, which helps in reducing reflections and improving impedance matching between the waveguide and free space. This design allows electromagnetic waves to radiate efficiently with minimal loss.
+
+Unlike dipole or isotropic antennas, which radiate energy in multiple directions, a horn antenna focuses energy in a specific direction. As a result, it exhibits high directivity and gain. The radiation pattern of a horn antenna is characterized by a dominant main lobe in the forward direction and relatively small side lobes, indicating that most of the radiated power is concentrated along a particular axis.
+
+The radiation behavior of a horn antenna can be approximated using a cosine-based function:
+
+R(θ) = |cos(θ)|ⁿ
+
+where n is a constant that controls the beamwidth of the radiation pattern. A higher value of n results in a narrower main lobe, which indicates increased directivity and better beam focusing.
+
+In the 2D radiation pattern, the horn antenna produces a single strong main lobe pointing in one direction, demonstrating that the radiation is highly directional. The absence of significant radiation in other directions confirms its efficiency in focusing electromagnetic energy.
+
+For three-dimensional visualization, the radiation pattern is first expressed in spherical coordinates and then converted into Cartesian coordinates using the following relations:
+
+X = R sin θ cos ϕ
+
+Y = R sin θ sin ϕ
+
+Z = R cos θ
+
+The resulting 3D radiation pattern forms a highly concentrated beam along one axis, showing a sharp and focused energy distribution. This directional property makes horn antennas particularly suitable for applications such as radar systems, satellite communication, microwave links, and antenna measurements.
+
+Additionally, horn antennas are widely used as standard gain antennas because of their predictable radiation characteristics and ease of analysis. Thus, the study of horn antennas provides valuable insight into high-frequency directional radiation and antenna design principles.
+
+Lab 04 — Theory
+A linear antenna array is formed by arranging multiple identical antenna elements in a straight line with uniform spacing. By properly controlling the amplitude and phase of excitation of each element, the overall radiation pattern can be shaped to achieve higher directivity, improved beam steering, and desired radiation characteristics. This makes antenna arrays highly useful in modern communication and radar systems.
+
+The total radiation pattern of a linear array is determined by the product of the individual element pattern and the array factor (AF). The array factor represents the combined effect of all antenna elements and plays a crucial role in determining both the direction and shape of radiation.
+
+For a uniform linear array with N elements and inter-element spacing d, the array factor is given by:
+
+AF(θ) = |Σₙ₌₀ᴺ⁻¹ eʲⁿ⁽ᵏᵈᶜᵒˢ θ⁺ᵝ⁾|
+
+where:
+
+• k = 2π/λ is the wave number
+
+• λ is the wavelength
+
+• d is the spacing between adjacent elements
+
+• β is the progressive phase shift between elements
+
+The phase difference β determines the direction of maximum radiation. When β = 0, the array operates in broadside mode, where the maximum radiation occurs perpendicular to the array axis (θ = 90°). By adjusting β, the main beam can be steered in different directions without physically moving the antenna, a technique known as beam steering.
+
+The radiation pattern of a linear array typically consists of a main lobe, which indicates the direction of maximum radiation, and several side lobes, which represent unwanted radiation in other directions. The angular width of the main lobe, known as beamwidth, decreases as the number of elements increases, resulting in higher directivity and better focusing of electromagnetic energy.
+
+The spacing between elements also significantly affects the radiation pattern. If the spacing d is too large, unwanted grating lobes may appear, leading to multiple main beams and reduced performance. To avoid this, a common design choice is d = λ/2, which ensures efficient radiation without grating lobes.
+
+Lab 05 — Theory
+A broadside array antenna is a type of linear antenna array in which multiple identical antenna elements are arranged in a straight line with equal spacing, and all elements are excited with equal amplitude and phase. In this configuration, the maximum radiation occurs in a direction perpendicular to the axis of the array, which is known as the broadside direction.
+
+The overall radiation pattern of an array antenna depends on both the individual element pattern and the array factor (AF). The array factor represents the combined effect of all antenna elements and plays a crucial role in shaping the radiation pattern.
+
+For a uniform linear array with N elements and inter-element spacing d, the array factor is given by:
+
+AF(θ) = |Σₙ₌₀ᴺ⁻¹ eʲⁿ⁽ᵏᵈᶜᵒˢ θ⁺ᵝ⁾|
+
+For a broadside array, the phase difference β = 0, meaning all elements radiate in phase. This results in constructive interference in the direction θ = 90°, producing a strong main lobe perpendicular to the array axis.
+
+In the case of a 3-element broadside array, the radiation pattern exhibits a dominant main lobe centered at θ = 90° along with smaller side lobes on either side. The presence of multiple elements increases the directivity of the antenna, allowing energy to be concentrated in a specific direction.
+
+The beamwidth of the main lobe decreases as the number of elements increases, leading to a sharper and more focused radiation pattern. However, side lobes are also formed due to interference between waves from different elements, which represent unwanted radiation in other directions.
+
+The 2D radiation pattern of a broadside array typically shows symmetry about the broadside direction, confirming that the antenna radiates equally on both sides of the perpendicular axis. This property makes broadside arrays highly useful in applications such as radar systems, wireless communication, and broadcasting, where controlled directional radiation is required.
+
+Thus, the study of a 3-element broadside array helps in understanding how multiple antenna elements interact to shape the radiation pattern and improve antenna performance.
+
+Lab 06 — Theory
+In antenna theory, when two isotropic point sources radiate electromagnetic waves simultaneously, the resulting radiation pattern is determined by the principle of superposition. If the sources have equal amplitude and are in phase, their waves interfere constructively and destructively at different angles, producing a characteristic interference pattern.
+
+For two isotropic sources separated by a distance d, the array factor (AF) in the far-field region is given by:
+
+AF(θ) = 2 cos((kd/2) cos θ)
+
+where:
+
+• k = 2π/λ is the wave number
+
+• λ is the wavelength
+
+• d is the distance between the two sources
+
+When the spacing is d = λ/2, the expression becomes:
+
+AF(θ) = 2 cos((π/2) cos θ)
+
+This equation shows that the radiation pattern depends on the cosine of the angle, leading to alternating regions of constructive and destructive interference.
+
+Constructive interference occurs when the waves from both sources arrive in phase, resulting in maximum radiation (main lobes). Destructive interference occurs when the waves cancel each other, producing nulls in the radiation pattern.
+
+The far-field radiation pattern is symmetric and typically exhibits two main lobes and several nulls depending on the spacing and wavelength. This pattern demonstrates how multiple sources can shape and control radiation characteristics.
+
+Lab 07 — Theory
+When two isotropic point sources radiate electromagnetic waves with equal amplitude but opposite phase (i.e., a phase difference of π radians), the resulting radiation pattern is significantly altered due to interference effects. According to the principle of superposition, the total field is the sum of the individual fields from both sources.
+
+For two sources separated by a distance d, the array factor (AF) considering a phase difference β is given by:
+
+AF(θ) = 2 cos((kd/2) cos θ + β/2)
+
+where:
+
+• k = 2π/λ is the wave number
+
+• β is the phase difference between sources
+
+For opposite phase excitation, β = π, so the expression becomes:
+
+AF(θ) = 2 cos((kd/2) cos θ + π/2)
+
+Using trigonometric identity, this simplifies to:
+
+AF(θ) = 2 sin((kd/2) cos θ)
+
+For spacing d = λ/2, we get:
+
+AF(θ) = 2 sin((π/2) cos θ)
+
+This equation indicates that the radiation pattern will have nulls where the sine function becomes zero and maxima where it reaches its peak.
+
+Unlike the equal-phase case, the radiation pattern here shows minimum radiation in the broadside direction (θ = 90°) and maximum radiation along the axis (θ = 0° and 180°). This results in a pattern similar to an end-fire array.
+
+Thus, phase difference plays a crucial role in controlling the direction of radiation and shaping the antenna pattern.
+
+Lab 08 — Theory
+When two isotropic point sources radiate electromagnetic waves with unequal amplitudes and opposite phase, the resulting radiation pattern is governed by both amplitude weighting and phase difference. According to the principle of superposition, the total radiated field at any observation point is the vector sum of the individual fields produced by each source.
+
+For two isotropic sources with amplitudes A₁ and A₂, separated by a distance d, and having a phase difference β, the array factor (AF) can be expressed as:
+
+AF(θ) = A₁ + A₂eʲ⁽ᵏᵈᶜᵒˢ θ⁺ᵝ⁾
+
+where:
+
+• k = 2π/λ is the wave number
+
+• λ is the wavelength
+
+• d is the spacing between the sources
+
+• β is the phase difference between the sources
+
+For opposite phase excitation, the phase difference is β = π, and the expression becomes:
+
+AF(θ) = A₁ − A₂eʲᵏᵈᶜᵒˢ θ
+
+This indicates that the signals from the two sources are out of phase, leading to destructive interference in certain directions and constructive interference in others.
+
+When the amplitudes are unequal (A₁ ≠ A₂), the interference pattern becomes asymmetric. Unlike the equal amplitude case, the nulls are no longer completely zero because one source contributes more energy than the other. As a result, the radiation pattern is distorted, and the maxima and minima are no longer evenly distributed.
+
+For a spacing of d = λ/2, the radiation pattern exhibits characteristics similar to an end-fire array, where maximum radiation occurs along the axis of the sources (θ = 0° and 180°), while reduced radiation occurs in the perpendicular direction. However, due to unequal amplitudes, the lobes are not identical in magnitude, and the symmetry of the pattern is broken. The ratio of amplitudes (A₁/A₂) plays a significant role in controlling the depth of nulls and the level of side lobes. Thus, both amplitude and phase control are essential parameters in antenna arrays.
+
+Lab 09 — Theory
+A broadside array antenna consists of multiple identical elements arranged linearly with equal spacing and excited with equal amplitude and phase. In such an array, the maximum radiation occurs perpendicular to the array axis, known as the broadside direction (θ = 90°).
+
+For a uniform linear array with N elements and spacing d, the array factor is expressed as:
+
+AF(θ) = |Σₙ₌₀ᴺ⁻¹ eʲⁿᵏᵈᶜᵒˢ θ|
+
+where:
+
+• k = 2π/λ is the wave number
+
+• d is the spacing between elements
+
+In a broadside configuration, all elements are excited in phase (β = 0), ensuring constructive interference in the perpendicular direction.
+
+When the number of elements increases (e.g., N = 5), the radiation pattern becomes more directional. The main lobe becomes narrower, indicating higher directivity and improved beam focusing. However, additional side lobes also appear, which represent undesired radiation in other directions.
+
+The beamwidth of the main lobe is inversely proportional to the number of elements, meaning more elements produce a sharper beam. At the same time, side lobes may become more complex, requiring amplitude control (tapering) to suppress them.
+
+Thus, increasing the number of elements in a broadside array improves directivity but also introduces challenges such as side lobe management.
+
+Lab 10 — Theory
+A broadside array antenna is formed by arranging multiple identical antenna elements in a straight line with equal spacing and exciting them with equal amplitude and phase. In such arrays, maximum radiation occurs perpendicular to the array axis (θ = 90°), which is known as the broadside direction.
+
+The radiation pattern of a uniform linear array is determined by its array factor (AF), given by:
+
+AF(θ) = |Σₙ₌₀ᴺ⁻¹ eʲⁿᵏᵈᶜᵒˢ θ|
+
+where:
+
+• k = 2π/λ is the wave number
+
+• d is the spacing between elements
+
+• N is the number of elements
+
+For a broadside array, all elements are excited in phase (β = 0), resulting in constructive interference in the perpendicular direction.
+
+When the number of elements increases to N = 7, the radiation pattern becomes highly directional. The main lobe becomes very narrow, indicating a high degree of directivity and strong beam focusing. However, the number of side lobes also increases, and their spacing becomes smaller.
+
+The beamwidth is inversely proportional to the number of elements, so increasing N reduces the beamwidth significantly. While this improves directivity, it also requires careful design to control side lobes using techniques such as amplitude tapering.
+
+Thus, a 7-element broadside array demonstrates how increasing the number of antenna elements enhances performance but introduces additional complexity in radiation control.
